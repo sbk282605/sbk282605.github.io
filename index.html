@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For You ☕🐱</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+      background: linear-gradient(#fdf6ee, #f7e8d0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #5a3e2b;
+    }
+
+    .cafe {
+      background: #fff8ef;
+      border-radius: 20px;
+      padding: 28px;
+      width: 340px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      position: relative;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    .cats {
+      font-size: 32px;
+      margin: 10px 0;
+    }
+
+    .letter {
+      margin-top: 18px;
+      padding: 15px;
+      background: #f2d6b3;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      font-size: 14px;
+    }
+
+    .letter:hover {
+      transform: scale(1.05);
+    }
+
+    .message {
+      display: none;
+      margin-top: 15px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 13px;
+      line-height: 1.55;
+      text-align: left;
+    }
+
+    .flower {
+      position: absolute;
+      font-size: 20px;
+    }
+
+    .f1 { top: -10px; left: -10px; }
+    .f2 { top: -10px; right: -10px; }
+    .f3 { bottom: -10px; left: -10px; }
+    .f4 { bottom: -10px; right: -10px; }
+
+    button {
+      margin-top: 15px;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 10px;
+      background: #c89b6d;
+      color: white;
+      font-size: 13px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="cafe">
+  <div class="flower f1">🌸</div>
+  <div class="flower f2">🌼</div>
+  <div class="flower f3">🌷</div>
+  <div class="flower f4">🌸</div>
+
+  <h1>Welcome to the Cat Café ☕</h1>
+  <p>Stay a little…</p>
+
+  <div class="cats">🐱🐾🐱</div>
+
+  <div class="letter" onclick="openLetter()">
+    💌 Click to open a letter
+  </div>
+
+  <div class="message" id="message">
+    <strong>Nia,</strong><br><br>
+
+    I don’t know how to explain this without sounding scared, because what I feel for you is real.
+    You’re the kind of girl who makes the world feel quieter and warmer at the same time.
+    Just knowing you exist makes my days softer.<br><br>
+
+    You’re so gentle, so kind, and so genuine that it makes me want to protect your heart, not play with it.
+    I don’t want something temporary with you.
+    I want to choose you—on calm days, hard days, messy days.
+    I want to be someone you feel safe with, someone who listens, who stays, who never makes you doubt where you stand.<br><br>
+
+    If you let me, I’d love you patiently, take care of you, support your dreams,
+    and stand beside you no matter what.
+    I promise loyalty, honesty, and a heart that doesn’t wander.
+    I don’t want anyone else—I want you.<br><br>
+
+    I don’t need perfection.
+    I just want you, exactly as you are. 💗<br><br>
+
+    <em>
+      Aku tulus sama kamu, Nia.
+      Aku mau jaga hati kamu, setia sama kamu,
+      dan selalu ada buat kamu.
+      Kamu itu spesial banget buat aku 🤍
+    </em>
+  </div>
+
+  <button onclick="playMusic()">Play music 🎵</button>
+</div>
+
+<audio id="music" loop>
+  <source src="https://drive.google.com/uc?export=download&id=1i5n77CYsK1ElUkslTThbNVjaQGI23ut8" type="audio/mpeg">
+</audio>
+
+<script>
+  function openLetter() {
+    const msg = document.getElementById("message");
+    msg.style.display = msg.style.display === "block" ? "none" : "block";
+  }
+
+  function playMusic() {
+    document.getElementById("music").play();
+  }
+</script>
+
+</body>
+</html>
